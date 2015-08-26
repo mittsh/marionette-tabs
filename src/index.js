@@ -4,7 +4,7 @@
   } else if (typeof exports !== 'undefined') {
     module.exports = factory(require('underscore'), require('backbone'), require('backbone.marionette'));
   } else {
-    root.Marionette.Tabs = factory(root, root.Backbone, root._, root.Backbone.Marionette);
+    root.Marionette.Tabs = factory(root._, root.Backbone, root.Backbone.Marionette);
   }
 
 }(this, function(_, Backbone, Marionette) {
