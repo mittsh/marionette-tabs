@@ -1,14 +1,11 @@
 {
   "name": "marionette-tabs",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "authors": [
     "Stu Kabakoff <stuart@compstak.com>"
   ],
   "description": "A tabbed view widget for Marionette",
-  "main": "TabbedView.js",
-  "moduleType": [
-    "amd"
-  ],
+  "main": "lib/backbone.marionette-tabs.js",
   "keywords": [
     "tabs",
     "tabbed",
@@ -27,7 +24,8 @@
     "tests"
   ],
   "dependencies": {
-    "marionette": "^1.8.3",
-    "requirejs": "~2.1.15"
+    "backbone": "^1.0.0",
+    "underscore": "^1.4.4",
+    "marionette": "^1.8.3"
   }
 }

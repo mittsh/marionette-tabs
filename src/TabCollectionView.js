@@ -1,23 +1,16 @@
-define(function (require) {
-    'use strict';
+Tab.CollectionView = Marionette.CollectionView.extend({
 
-    var Marionette = require('backbone.marionette');
-    var TabItemView = require('./TabItemView');
+    tagName: 'ul',
 
-    return Marionette.CollectionView.extend({
-        
-        tagName: 'ul',
-        
-        className: 'tab-item-view',
+    className: 'tab-item-view',
 
-        itemView: TabItemView,
+    itemView: Tab.ItemView,
 
-        itemEvents: {
-            'select': function (eventName, itemView) {
-                console.log('triggering select');
-                this.trigger('change', itemView);
-            }
+    itemEvents: {
+        'select': function (eventName, itemView) {
+            console.log('triggering select');
+            this.trigger('change', itemView);
         }
+    }
 
-    });
 });

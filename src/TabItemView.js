@@ -1,21 +1,15 @@
-define(function (require) {
-    'use strict';
+Tab.ItemView = Marionette.ItemView.extend({
+    template: function (model) {
+        return '<span>' + model.title + '</span>';
+    },
 
-    var Marionette = require('backbone.marionette');
+    tagName: 'li',
 
-    return Marionette.ItemView.extend({
-        template: function (model) {
-            return '<span>' + model.title + '</span>';
-        },
-        
-        tagName: 'li',
-
-        events: {
-            'click': function (event) {
-                event.preventDefault();
-                this.trigger('select', this);
-            }
+    events: {
+        'click': function (event) {
+            event.preventDefault();
+            this.trigger('select', this);
         }
+    }
 
-    });
 });

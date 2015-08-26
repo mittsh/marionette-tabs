@@ -8,9 +8,9 @@ Marionette-tabs provides five classes.
 - `Tab.Collection` - a simple collection of TabItems.
 - `Tab.ItemView` - this may be extended to change the appearance of the tabs.
 - `Tab.CollectionView` - this may be extended to change the appearance of the tab bar.
-- `Tab.TabItem` - this model that throw errors if required properties are missing.
+- `Tab.Item` - this model that throw errors if required properties are missing.
 
-For the most basic usage you will only need to create a `Tabs.Collection` for your tabs and add `Tabs.Behavior` to your layout.
+For the most basic usage you will only need to create a `Tab.Collection` for your tabs and add `Tab.Behavior` to your layout.
 
 ## Basic Usage
 
@@ -18,13 +18,13 @@ For the most basic usage you will only need to create a `Tabs.Collection` for yo
 define(function (require) {
 
 	var Marionette = require('backbone.marionette');
-	
-	var Tab = require('marionette-tabs/index');
+
+	var Tab = require('marionette-tabs');
 
 	// This collection holds your tab objects
 	var tabs = new Tab.Collection();
 
-	// each TabItem object must have an id, title, and a view that 
+	// each TabItem object must have an id, title, and a view that
 	// will be instantiated for the actual content of the tab.
 	tabs.add({
 		id: 'tab-one',
@@ -37,7 +37,7 @@ define(function (require) {
 
 	// This is the layout that you create.
 	return Marionette.Layout.extend({
-		
+
 		template: '#tab_layout',
 
 		// Your layout must have regions called 'tabs' and 'layout'
